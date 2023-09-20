@@ -20,16 +20,14 @@ def main(str_1, str_2):
     Эта функция вызывается автоматически при запуске скрипта в консоли
     В ней надо заменить pass на ваш код
     """
-    if not isinstance(str_1, str) and not isinstance(str_2, str):
-        print(0)
-    elif str_1 == str_2:
-        print(1)
-    elif str_1 != str_2 and str_2 == 'learn':
-        print(3)
-    elif str_1 != str_2 and len(str_1) > len(str_2):
-        print(2)
-    else:
-        print('')
+    if isinstance(str_1, str) and isinstance(str_2, str):
+        if str_1 == str_2:
+            return 1
+        elif str_2 == 'learn':
+            return 3
+        elif len(str_1) > len(str_2):
+            return 2
+    return 0
     
     
 if __name__ == "__main__":
